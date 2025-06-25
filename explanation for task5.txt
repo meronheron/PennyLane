@@ -1,0 +1,14 @@
+qml.probs() returns the probability of measuring each possible basis state. It is deterministic , 
+meaning that it always returns the same result for a given input. The output is a vector of probabilities,
+where the index of the vector corresponds to the index of the basis state in the computational basis but , 
+if shots are used, it estimates the probabilities based on repeated measurements, making its output random.
+
+qml.sample() returns raw measurement outcomes from running the circuit multiple times (based on the number of shots 
+we specify) and is always random, as it mimics the behavior of real quantum hardware.
+
+qml.expval() returns the expected (average) value of an observable, such as PauliZ, and is deterministic if no shots
+are used. 
+
+we use probs() to understand the full distribution of outcomes, sample() to simulate real-world measurements
+and randomness, and expval() when you need a single average quantity, especially in physics-based or 
+optimization tasks.
